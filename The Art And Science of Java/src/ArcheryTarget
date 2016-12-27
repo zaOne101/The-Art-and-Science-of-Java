@@ -1,0 +1,35 @@
+/*
+ * File: ArcheryTarget.java
+ * -------------------------
+ * This class displays an archery target on the screen,
+ * and is also a logo for a supermarket chain. It is also 
+ * exercise 6 in Chapter 2, which has the following enunciation:
+ * "Write a GraphicsProgram that draws the following picture of an
+ *  archery target, which also happens to be the logo of a large discount chain: 
+ *  Both inner and outer circles should be colored red."
+ * @Eric Roberts 
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+import java.awt.*;
+
+public class ArcheryTarget extends GraphicsProgram  {
+	
+	public void run () {
+		GOval outterCircle = new GOval(200,100,120,120);
+		outterCircle.setColor(Color.RED);
+		outterCircle.setFilled(true);
+		add(outterCircle);
+		GOval midCircle = new GOval(220, 120, 80, 80);
+		midCircle.setColor(Color.WHITE);
+		midCircle.setFilled(true);
+		add(midCircle);
+		GOval innerCircle = new GOval(240,140,40,40);
+		innerCircle.setColor(Color.RED);
+		innerCircle.setFilled(true);
+		add(innerCircle);
+		
+	}
+
+}
