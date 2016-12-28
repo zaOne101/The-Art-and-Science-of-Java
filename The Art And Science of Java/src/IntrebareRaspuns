@@ -1,0 +1,71 @@
+/*
+ * File: IntrebareRaspuns.java
+ * ---------------------------
+ * @DanielaSofran
+ * Acest program intreaba userul o intrebare, afiseaza patru variante de
+ * raspuns, cere userului sa selecteze unul din raspunsuri. Daca raspunsul
+ * este corect, afiseaza ca este corect, iar daca nu, intreaba userul daca
+ * mai doreste sa incerce o data. Este exercitiul 14 din slide, cu urmatorul
+ * enunt : 
+ * "Scrieti un program Java care afiseaza o intrebare de tip grila si
+ * ofera utilizatorului posibilitatea de a raspunde. Daca raspunsul este 
+ * gresit, utilizatorul poate decide daca doreste sa mai incerce sau nu.
+ * 
+ * ex: se afiseaza: 
+ * Pe cati biti se reprezinta un int? 
+ * a. 1 ; b. 8 ; c. 32 ; d. 64
+ * -> Se asteapta ca utilizatorul sa introduca un raspuns (a, b, c, sau d).
+ * daca raspunsul este corect, se afiseaza un mesaj si se incheie programul,
+ * daca raspunsul este gresit se va afisa : "Doriti sa mai incercati?"
+ * Utilizatorul raspunde prin y(yes) sau n (no), daca raspunsul este 
+ * afirmativ se cere din nou sa se introduca un raspuns, daca raspunsul este
+ * nu, se iese din program.
+ * 
+ *   Cand comparati un sir de caractere citit de la tastatura cu alt sir de
+ * caractere, folositi :
+ * ex: String str = in.next();
+ * 	   if (str.equals("yes")) {....} 
+ */
+
+import java.util.*;
+
+public class IntrebareRaspuns {
+
+	public static void main(String[] args) {
+		boolean esteTerminat = false;
+		System.out.println("Care este valoarea lui Pi?");
+		System.out.println("a: 31.41592");
+		System.out.println("b: 3.141592");
+		System.out.println("c: 34.15129");
+		System.out.println("d: 3.415129");
+		Scanner input = new Scanner (System.in);
+		String answer = input.next();
+		boolean esteVariantaData = answer.equals("a") ||answer.equals("A") || answer.equals("b") || answer.equals("B") || answer.equals("c") || answer.equals("C") || answer.equals("d") || answer.equals("D");
+		while (esteVariantaData ) {
+			if (answer.equals("b") || answer.equals("B")) {
+				System.out.println("Raspuns corect! Va multumim.");
+				break;
+			} else {
+				System.out.println("Raspunsul este gresit");
+				System.out.println("Doriti sa mai incercati? Daca da, scrieti y, daca nu, scrieti n");
+				String yes = "y";
+				String no = "n";
+				String daSauNu = input.next();
+				if (daSauNu.equals(yes)){
+					System.out.println("Care este varianta corecta? a? b? c? sau d?");
+					answer = input.next();
+				} else if (daSauNu.equals(no)) {
+				System.out.println("Va multumim ca ati incercat.");
+				break;
+				} else {
+				System.out.println("Va rugam sa intoduceti y pentru da sau n pentru nu.");
+				answer = input.next();
+				}
+			}
+		} //else {
+		//	System.out.println("Va rugam sa introduceti una din variante a, b, c, d");
+		//}
+
+	}
+
+}
