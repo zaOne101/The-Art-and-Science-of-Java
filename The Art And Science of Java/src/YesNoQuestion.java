@@ -1,7 +1,6 @@
 /*
  * File: YesNoQuestion.java
  * ------------------------
- * uh cristi.
  * This program asks the user a question and expects a yes / no
  * answer. It is also exercise 7 in Chapter 5.
  * "Write a predicate method askYesNoQuestion(prompt) that prints 
