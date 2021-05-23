@@ -12,6 +12,7 @@
 
 import java.util.*;
 
+//This class is buggy. If digits are divisible by ten, then the reverse doesent print. numbers like 101, 100, 11110, are buggy
 public class IsPalindrome {
 
                  public static void main(String[] args) {
